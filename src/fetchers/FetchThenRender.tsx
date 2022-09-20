@@ -4,7 +4,7 @@ import { User } from "../types/user";
 
 async function fetchUserProfile() {
   const [user, posts] = await Promise.all([
-    fetch("https://jsonplaceholder.typicode.com/us").then((userResponse) =>
+    fetch("https://jsonplaceholder.typicode.com/users/2").then((userResponse) =>
       userResponse.json()
     ),
     fetch("https://jsonplaceholder.typicode.com/posts?userId=2").then(
