@@ -3,10 +3,13 @@ import { FetchOnRender } from "./fetchers/FetchOnRender";
 import "./App.css";
 import { FetchThenRender } from "./fetchers/FetchThenRender";
 import { RenderAsYouFetch } from "./fetchers/RenderAsYouFetch";
+import { UseTransition } from "./hooks/UseTransition";
+import { UseSyncExternalStorage } from "./hooks/UseSyncExternalStore";
 
 function App() {
   return (
     <div className="App">
+      <UseSyncExternalStorage />
       <h1>4Developers 2022 Katowice</h1>
       <div className="grid">
         <div className="card">
@@ -22,6 +25,7 @@ function App() {
           <RenderAsYouFetch />
         </div>
       </div>
+      <UseTransition />
     </div>
   );
 }
